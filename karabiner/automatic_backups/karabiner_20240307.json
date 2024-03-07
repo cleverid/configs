@@ -18,16 +18,14 @@
                 },
                 "rules": [
                     {
-                        "description": "Change hiper+hjkl to arrow keys",
+                        "description": "Change right_command+hjkl to arrow keys",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -46,9 +44,7 @@
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -67,9 +63,7 @@
                                     "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -88,9 +82,7 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
+                                            "right_command"
                                         ],
                                         "optional": [
                                             "any"
@@ -121,8 +113,9 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_command",
+                                        "key_code": "left_shift",
                                         "modifiers": [
+                                            "left_command",
                                             "left_control",
                                             "left_option"
                                         ]
