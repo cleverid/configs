@@ -4,8 +4,8 @@ cmd + alt + ctrl - r : yabai --restart-service
 ## Opens:
 # terminal
 cmd + alt + ctrl - t : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -na iTerm
-# yandex browser
-cmd + alt + ctrl - b : open -n -a "Yandex"
+# browser
+cmd + alt + ctrl - b : open -a Firefox ; skhd -k "0x35"
 
 ## rotate tree 90
 cmd + alt + ctrl - r : yabai -m space --rotate 90
@@ -21,6 +21,8 @@ cmd + alt + ctrl - 6 : yabai -m space --focus 6
 cmd + alt + ctrl - 7 : yabai -m space --focus 7
 cmd + alt + ctrl - 8 : yabai -m space --focus 8
 cmd + alt + ctrl - 9 : yabai -m space --focus 9
+# Move
+cmd + alt + ctrl - a : yabai -m window --warp next
 
 # monitor
 cmd + alt + ctrl - a : yabai -m display --focus 2
