@@ -1,6 +1,6 @@
 [user]
-	email = eawapownikov@gmail.com
-	name = Шапошников Евгений
+	email = 163986333+pt-eugeny@users.noreply.github.com
+	name = Eugeny Shaposhnikov
 [core]
 	editor = nano
 [http]
@@ -11,3 +11,8 @@
 [alias]
     fixup = "!sh -c '(git diff-files --quiet || (echo Unstaged changes, please commit or stash with --keep-index; exit 1)) && COMMIT=$(git rev-parse $1) && git commit --fixup=$COMMIT && git rebase -i --autosquash $COMMIT~1' -"
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
