@@ -5,7 +5,9 @@ cmd + alt + ctrl - r : yabai --restart-service
 
 ## Opens:
 # terminal
-cmd + alt + ctrl - t : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -na iTerm
+# cmd + alt + ctrl - t : osascript -e 'tell application "iTerm2" to create window with default profile command ""' || open -na iTerm
+# cmd + alt + ctrl - t : open -a -n alacritty 
+cmd + alt + ctrl - t : osascript -e 'tell application "Alacritty" to create window with default profile command ""' || open -na alacritty
 # browser
 cmd + alt + ctrl - b : open -a Firefox ; skhd -k "0x35"
 
