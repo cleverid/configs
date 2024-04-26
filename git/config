@@ -1,5 +1,6 @@
 [user]
 	name = Eugeny Shaposhnikov
+	email = eawapownikov@gmail.con
 [core]
 	editor = nvim
 [http]
