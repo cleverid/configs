@@ -42,13 +42,22 @@ return require('packer').startup(function(use)
 	-- Автоустановка пакетного менеджера
 	use 'wbthomason/packer.nvim'
 	use 'nvim-tree/nvim-web-devicons'
-	use({
-		'rose-pine/neovim',
+	use {  'nvim-lualine/lualine.nvim',
+		requires = {'kyazdani42/nvim-web-devicons', opt = true},
+		config = function()
+			require('lualine').setup()
+		end 
+	}
+	use {  'rose-pine/neovim',
 		as = 'rose-pine',
 		config = function()
 			vim.cmd('colorscheme rose-pine')
 		end
-	})
+	}
+	use {  'numToStr/Comment.nvim',
+		config = function() 
+		require('Comment').setup() 
+	end }
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
