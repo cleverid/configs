@@ -47,7 +47,11 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} },
       config = function() 
-      require'telescope'.setup {}
+       require'telescope'.setup {}
+  end, }
+  use { 'ggandor/leap.nvim',
+      config = function() 
+       require'leap'.setup {}
   end, }
     
   ---------------------------------------------------------
