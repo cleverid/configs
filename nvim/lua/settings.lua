@@ -88,7 +88,6 @@ lsp_installer.on_server_ready(function(server)
     server:setup(opts)
 end)
 
-
 -- nvim-cmp supports additional completion capabilities
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
@@ -115,3 +114,8 @@ cmp.setup {
         },
    },
 }
+
+-- Leap
+local leap = require 'leap'
+leap.setup {}
+leap.create_default_mappings()

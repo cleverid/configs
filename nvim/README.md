@@ -5,15 +5,24 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
+## Install nerd fonts
+
+### Archlinux
+
+view installed fonts
+```
+pacman -Qg nerd-fonts
+```
+
+install all nerd fonts
+```
+sudo pacman -S $(pacman -Sgq nerd-fonts)
+```
+
 Run command to intall all plugin
 ```
 :PlugInstall
 ```
-
-Need install:
-- vim-plug - see above
-- ripgrep
-- rust-analyzer
 
 
 ## Горячие клавиши Vim
