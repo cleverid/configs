@@ -28,6 +28,9 @@ cmd + alt + ctrl - 9 : yabai -m space --focus 9
 # relative
 cmd + alt + ctrl - a : yabai -m space --focus prev
 cmd + alt + ctrl - s : yabai -m space --focus next
+# jump
+cmd + alt + ctrl - q : yabai -m space 1; yabai -m space --focus 1
+cmd + alt + ctrl - w : yabai -m window --focus recent; yabai -m space --focus resent
 
 # monitor
 cmd + alt + ctrl - a : yabai -m display --focus 2
