@@ -32,7 +32,7 @@ sudo pacman -S $(pacman -Sgq nerd-fonts)
 
 Run command to intall all plugin
 ```
-:PlugInstall
+:PackerSync
 ```
 
 
