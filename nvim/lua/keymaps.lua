@@ -1,5 +1,10 @@
 local map = vim.api.nvim_set_keymap
+local set = vim.keymap.set
 local default_opts = {noremap = true, silent = true}
+
+vim.g.mapleader = " "  -- Sets the spacebar as the leader key
+vim.g.maplocalleader = " " -- You can also set a local leader if needed
+
 
 -----------------------------------------------------------
 -- НАВИГАЦИЯ
@@ -14,7 +19,6 @@ map('n', '<Tab>', ':BufferLineCycleNext<CR>', default_opts)
 map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
 -- <F5> разные вариации нумераций строк, можно переключаться на ходу
 map('n', '<F5>', ':exec &nu==&rnu? "se nu!" : "se rnu!"<CR>', default_opts)
-
 -----------------------------------------------------------
 -- РЕЖИМЫ
 -----------------------------------------------------------
@@ -39,3 +43,22 @@ map('n', '<S-F4>', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], de
 map('n', '<F8>', ':TagbarToggle<CR>', default_opts)
 -- <F4> Дерево файлов. Для иконок следует установить Nerd Font
 map('n', '<F4>', ':NvimTreeRefresh<CR>:NvimTreeToggle<CR>', default_opts)
+
+-----------------------------------------------------------
+-- Smart splits
+-----------------------------------------------------------
+set('n', '<A-h>', require('smart-splits').resize_left)
+set('n', '<A-j>', require('smart-splits').resize_down)
+set('n', '<A-k>', require('smart-splits').resize_up)
+set('n', '<A-l>', require('smart-splits').resize_right)
+-- moving between splits
+set('n', '<C-h>', require('smart-splits').move_cursor_left)
+set('n', '<C-j>', require('smart-splits').move_cursor_down)
+set('n', '<C-k>', require('smart-splits').move_cursor_up)
+set('n', '<C-l>', require('smart-splits').move_cursor_right)
+set('n', '<C-\\>', require('smart-splits').move_cursor_previous)
+-- swapping buffers between windows
+set('n', '<leader><leader>h', require('smart-splits').swap_buf_left)
+set('n', '<leader><leader>j', require('smart-splits').swap_buf_down)
+set('n', '<leader><leader>k', require('smart-splits').swap_buf_up)
+set('n', '<leader><leader>l', require('smart-splits').swap_buf_right)
