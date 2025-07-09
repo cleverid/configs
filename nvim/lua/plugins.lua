@@ -21,6 +21,8 @@ return require('packer').startup(function(use)
       vim.cmd('colorscheme rose-pine')
     end
   })
+  -- Split pane
+  use({ 'mrjones2014/smart-splits.nvim' })
   ---------------------------------------------------------
   -- МОДУЛИ РЕДАКТОРА
   ---------------------------------------------------------
